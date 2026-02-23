@@ -1,0 +1,710 @@
+/* =========================
+   GLOBAL RESET
+   ========================= */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'Poppins',sans-serif;
+  background-color: rgb(226, 208, 185);
+}
+
+/* =========================
+   ORIGINAL TOP (OLD HERO)
+   (keep only if you still use .logo-container version)
+   If you use the NEW hero, you can ignore .logo-container in HTML
+   ========================= */
+.gold-theme{
+  background-color: rgb(113, 67, 7);
+  padding-top: 20px;
+}
+
+.logo-container{
+  position: relative;
+}
+
+.logo-container .left{
+  position: absolute;
+  top: 55px;
+  left: 15px;
+  z-index: 9;
+}
+
+.logo-container .right{
+  position: absolute;
+  top: 55px;
+  right: 15px;
+  z-index: 9;
+}
+
+.logo-container .center{
+  color: #ffffff;
+  text-align: center;
+  margin-top: -70px;
+}
+
+.logo-container .center h3{
+  font-size: 30px;
+}
+
+.logo-container .center img{
+  width: 200px;
+  height: 200px;
+  border: 7px solid #c9bf2c;
+  border-radius: 50%;
+  padding: 5px;
+  background: white;
+  z-index: 9;
+  position: relative;
+  box-shadow: 0px 6px 10px rgb(0 0 0 / 20%);
+}
+
+.badge{
+  margin: 15px;
+  padding: 11px 11px;
+  font-size: 18px;
+  padding-top: 15px;
+  background-color: rgb(208, 118, 44);
+  direction: rtl;
+}
+
+/* icons container (old version) */
+.icons-container a{
+  display: inline-block;
+  width: calc(20% - 15px);
+  margin-right: 5px;
+  margin-left: 5px;
+  text-decoration: none!important;
+}
+
+.icons-container a img{
+  width: 30px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+.icons-container span{
+  display: block;
+  color: #ede3e3;
+  background-color: #b9ae18;
+  border-radius: 7px;
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+
+/* =========================
+   SLIDER (GENERAL)
+   ========================= */
+.slider{
+  border-bottom: 4px solid #c9bf2c;
+  margin-top: -3px;
+  background-color: rgb(72, 45, 9);
+}
+
+/* owl stage padding */
+.owl-carousel .owl-stage{
+  padding-top: 3px;
+}
+
+/* =========================
+   CATEGORY / ITEMS
+   ========================= */
+.item-container{
+  text-align: right;
+  background: linear-gradient(0deg, white, #ffffff33);
+  margin: 20px 10px;
+  border-radius: 7px;
+  border: 1px solid white;
+  box-shadow: 0px 0px 7px rgb(0 0 0 / 15%);
+}
+
+.item-container h4{
+  padding: 15px;
+  padding-bottom: 0;
+  padding-right: 24px;
+  font-size: 22px;
+  color: rgb(72, 45, 9);
+  text-align: center;
+  margin-top: 7px;
+  margin-bottom: 15px;
+}
+
+.item-container h6{
+  text-align: center;
+  font-size: 16px;
+}
+
+.item-details{
+  padding: 0px 10px;
+  direction: rtl;
+  color: rgb(72, 45, 9);
+}
+
+.item{
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px rgb(0 0 0 / 20%);
+  margin-bottom: 15px;
+  background: white;
+  height: 270px;
+}
+
+.item p{
+  max-height: 29px;
+  overflow: hidden;
+  line-height: 13px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: rgb(72, 45, 9);
+}
+
+.item b{
+  color: rgb(72, 45, 9);
+  font-size: 16px;
+}
+
+.item h5{
+  color: rgb(72, 45, 9);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.item-img{
+  height: 160px;
+  background-position: center center!important;
+  background-size: cover!important;
+}
+
+/* duplicate icons-container rules in your file -> keep the later one behavior */
+.icons-container a img{
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+}
+
+.icons-container a span{
+  color: black;
+  display: block;
+}
+
+.name-container{
+  position: relative;
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.language-container{
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.language-container a{
+  font-size: 14px;
+  padding-top: 8px;
+  margin-right: 5px;
+  margin-left: 5px;
+  background: white;
+  border: 1px solid black;
+  color: black;
+}
+
+/* =========================
+   ITEM BOX (POPUP)
+   ========================= */
+.item-box{
+  position: fixed;
+  top: 0;
+  display: none;
+  z-index: 99999;
+  width: 100%;
+  padding: 25px;
+  text-align: right;
+  direction: rtl;
+}
+
+.item-box img{
+  width: 100%;
+  border-radius: 20px;
+  min-height: 160px;
+  display: inline-block;
+  background: white;
+  border: 5px solid rgb(213, 184, 55);
+}
+
+.item-box .name-details{
+  border-radius: 20px;
+  background: rgb(213, 184, 55);
+  color: rgb(72, 45, 9);
+  padding: 15px 15px;
+  margin-top: 20px;
+  text-align: right;
+  direction: rtl;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-bottom: 30px;
+}
+
+.item-box .name-details p{
+  font-size: 12px;
+  margin-bottom: 0;
+}
+
+.item-box .name-details h4{
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 3px;
+  margin-bottom: 7px;
+}
+
+.close-box{
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  background: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 20px;
+  color: rgb(7, 0, 0);
+  padding-top: 10px;
+  box-shadow: 0px 4px 9px black;
+}
+
+.item-additional{
+  background: white;
+  border-radius: 20px;
+  padding: 15px;
+  margin-top: -28px;
+  font-size: 22px;
+  padding-top: 22px;
+  border: 6px solid rgb(213, 184, 55);
+  float: right;
+  width: 100%;
+}
+
+.item-additional .price{
+  font-weight: bold;
+  color: rgb(72, 45, 9);
+  font-size: 20px;
+}
+
+.item-additional .btn{
+  float: left;
+}
+
+.item-addons{
+  background: rgb(213, 184, 55);
+  padding: 15px;
+  padding-bottom: 35px;
+  color: white;
+  margin-top: -40px;
+}
+
+.item-box .fa-pepper-hot{
+  color: white;
+}
+
+/* paid addons area */
+.item-paid-addons{
+  zoom: 0.8;
+  background: rgb(213, 184, 55);
+  float: right;
+  margin-bottom: 11px;
+  padding-bottom: 24px;
+  padding-top: 13px;
+  margin-top: -34px;
+  color: rgb(72, 45, 9);
+  width: 100%;
+}
+
+.addons-open{
+  margin-right: 20px;
+  font-size: 18px;
+  margin-top: -5px;
+}
+
+.paid-addon-line{
+  width: 60%;
+  margin-bottom: -1px;
+  line-height: 34px;
+  font-size: 14px;
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.paid-addon-line img{
+  width: 32px;
+  height: 32px!important;
+  float: right;
+  min-height: 20px;
+  margin-left: 10px;
+  margin-right: 15px;
+  background: transparent;
+  border-radius: 0;
+  border: 2px solid #ffffff;
+}
+
+.paid-addon-line span{
+  float: left;
+  margin-left: 18px;
+}
+
+/* owl stage right spacing in category */
+.item-container .owl-carousel .owl-stage{
+  margin-right: -20px;
+}
+
+/* =========================
+   CART BUTTON
+   ========================= */
+.cart,
+.floating-btn{
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  color: white!important;
+  text-decoration: none!important;
+  background: rgb(72, 45, 9);
+  padding: 20px;
+  z-index: 999;
+  border-radius: 20px;
+  min-width: 100px;
+  text-align: center;
+  font-size: 20px;
+  padding-top: 23px;
+  box-shadow: 0px 0px 18px #00000063;
+  border: 1px solid #b7f165;
+}
+
+/* =========================
+   CART MODAL
+   ========================= */
+#cart-modal th{
+  background: #c9bf2c;
+  color: white;
+  font-weight: bold;
+  text-align: right;
+}
+
+#cart-modal{
+  direction: rtl;
+  text-align: right;
+}
+
+#cart-modal td{
+  font-size: 12px;
+}
+
+#cart-modal .close{
+  float: left;
+  color: white;
+  box-shadow: none!important;
+  text-shadow: none!important;
+}
+
+.modal-header{
+  padding: 15px;
+  border-bottom: 1px solid #e5e5e5;
+  background: #2f2f2f;
+  color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.modal-footer{
+  padding: 15px;
+  text-align: right;
+  border-top: 1px solid #e5e5e5;
+  background: #e7e7e7;
+}
+
+.modal-body{
+  padding: 0;
+  margin-top: -1px;
+}
+
+.empty-cart{
+  padding: 30px 15px;
+  text-align: center;
+}
+
+/* =========================
+   RESPONSIVE ITEM BOX WIDTH
+   ========================= */
+@media (min-width:768px){
+  .item-box{
+    width: 470px;
+    left: calc(50% - 235px);
+  }
+}
+
+/* =========================
+   MODERN HERO (TOP SECTION)
+   ========================= */
+.gold-theme.hero{
+  position: relative;
+  padding-top: 0;
+  background: #2b1708; /* fallback behind images */
+  overflow: hidden;
+}
+
+/* make slider inside hero clean */
+.gold-theme.hero .slider{
+  border-bottom: none;
+  margin-top: 0;
+  background: transparent;
+}
+
+.gold-theme.hero .slider .item img{
+  width: 100%;
+  height: 56vh;
+  min-height: 420px;
+  object-fit: cover;
+  filter: saturate(1.05) contrast(1.05);
+  transform: scale(1.02);
+}
+
+/* dark + gold overlay for readability */
+.hero-overlay{
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(1200px 600px at 50% 30%, rgba(201,191,44,.22), transparent 60%),
+    linear-gradient(180deg, rgba(0,0,0,.55), rgba(0,0,0,.25), rgba(0,0,0,.70));
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* content sits above slider */
+.hero-content{
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+/* glass card */
+.hero-card{
+  width: min(820px, 92vw);
+  border-radius: 22px;
+  padding: 18px 18px;
+  background: rgba(255,255,255,.10);
+  border: 1px solid rgba(255,255,255,.18);
+  box-shadow: 0 18px 50px rgba(0,0,0,.35);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #fff;
+}
+
+/* brand row */
+.hero-brand{
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.hero-logo{
+  width: 92px;
+  height: 92px;
+  border-radius: 22px;
+  object-fit: cover;
+  background: #fff;
+  padding: 4px;
+  border: 2px solid rgba(201,191,44,.95);
+  box-shadow: 0 10px 25px rgba(0,0,0,.28);
+}
+
+.hero-text{
+  display: grid;
+  gap: 4px;
+  align-items: center;
+}
+
+.hero-title{
+  margin: 0;
+  font-size: clamp(28px, 4vw, 44px);
+  letter-spacing: .12em;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.hero-subtitle{
+  opacity: .92;
+  font-size: 14px;
+  letter-spacing: .06em;
+}
+
+/* meta */
+.hero-meta{
+  margin-top: 12px;
+  display: grid;
+  gap: 8px;
+  justify-items: center;
+}
+
+.hero-badge{
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 14px;
+  border-radius: 999px;
+  background: rgba(213,184,55,.18);
+  border: 1px solid rgba(213,184,55,.38);
+  font-size: 15px;
+}
+
+.hero-note{
+  font-size: 12px;
+  opacity: .80;
+}
+
+/* action buttons */
+.hero-actions{
+  margin-top: 14px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.hero-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none !important;
+  padding: 12px 10px;
+  border-radius: 16px;
+  color: #fff;
+  background: rgba(0,0,0,.22);
+  border: 1px solid rgba(255,255,255,.18);
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+
+.hero-btn:hover{
+  transform: translateY(-2px);
+  background: rgba(0,0,0,.30);
+  border-color: rgba(201,191,44,.45);
+}
+
+.hero-btn img{
+  width: 22px;
+  height: 22px;
+}
+
+.hero-btn--call{
+  background: rgba(201,191,44,.20);
+  border-color: rgba(201,191,44,.45);
+}
+
+/* responsive tuning */
+@media (max-width: 600px){
+  .gold-theme.hero .slider .item img{
+    height: 62vh;
+    min-height: 460px;
+  }
+  .hero-actions{
+    grid-template-columns: 1fr;
+  }
+  .hero-card{
+    padding: 16px 14px;
+  }
+}
+
+
+/* =========================
+   MOBILE HERO FIX (VISIBLE BUTTONS)
+   ========================= */
+
+@media (max-width: 600px){
+
+  /* hero needs enough height for card */
+  .gold-theme.hero{
+    padding-bottom: 16px;
+  }
+
+  /* slider height tuned for mobile */
+  .gold-theme .slider .item img{
+    height: 52vh;          /* was too small */
+    min-height: 420px;     /* ensures space for card + buttons */
+    object-fit: cover;
+    transform: none;
+  }
+
+  /* place content centered (not pushed down too much) */
+  .hero-content{
+    padding: 14px;
+    padding-top: calc(14px + env(safe-area-inset-top));
+    align-items: center;   /* important: prevents clipping */
+  }
+
+  /* card a bit smaller but not cramped */
+  .hero-card{
+    width: 94vw;
+    border-radius: 18px;
+    padding: 14px 12px;
+    max-height: calc(52vh - 24px); /* fit inside hero height */
+    overflow: auto;               /* if it ever grows, still visible */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* brand stack */
+  .hero-brand{
+    flex-direction: row;   /* looks better like your screenshot */
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .hero-logo{
+    width: 74px;
+    height: 74px;
+    border-radius: 18px;
+  }
+
+  .hero-title{
+    font-size: 24px;
+    letter-spacing: .08em;
+    line-height: 1.1;
+  }
+
+  .hero-subtitle{
+    font-size: 12px;
+  }
+
+  .hero-note{
+    font-size: 11px;
+    text-align: center;
+  }
+
+  /* make buttons layout modern and always visible */
+  .hero-actions{
+    margin-top: 12px;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 columns */
+    gap: 8px;
+  }
+
+  /* make Instagram full width */
+  .hero-actions .hero-btn:first-child{
+    grid-column: 1 / -1;
+  }
+
+  .hero-btn{
+    padding: 10px 10px;
+    border-radius: 14px;
+    font-size: 14px;
+  }
+
+  .hero-btn img{
+    width: 20px;
+    height: 20px;
+  }
+}
